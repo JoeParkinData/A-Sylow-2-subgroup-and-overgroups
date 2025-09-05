@@ -1,0 +1,13 @@
+
+Mat:=eval Read("Syl2MatrixGens");
+WPgens:=eval Read("WPerm240gens");
+M1gens:=Mat[1..3]; M1:=MatrixGroup<248,GF(3) | M1gens>;
+M2gens:=[GL(248,3)!Mat[4], GL(248,3)!Mat[5]]; M2:=MatrixGroup<248,GF(3) | M2gens>;
+M3gens:=Mat[6..8]; M3:=MatrixGroup<248,GF(3) | M3gens>;
+Sgens:=Mat[9..13]; S:=MatrixGroup<248,GF(3) | Sgens>;
+WP:=Universe(WPgens);
+sigma:=Homomorphism(M2,WP,M2gens,WPgens);
+phi,P:=PermutationRepresentation(M2);
+Sperm:=S @ phi;
+psi,M3p:=PermutationRepresentation(M3);
+M3P,Psi:=DegreeReduction(M3p);
