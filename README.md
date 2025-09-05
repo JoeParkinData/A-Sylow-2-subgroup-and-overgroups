@@ -1,0 +1,3 @@
+// The file "Syl2MatrixGens" contains a tuple of thirteen elements of E_8(3) in its adjoint representation. Entries 1..3 generate the group M1, entries 4 and 5 generate M2 and entries 6,7,8 generate M3. Entries 9..13 generate the Sylow 2-subgroup S of E_8(3)
+// The file WPerm240gens contains generators for a permutation representation of the Weyl group of E_8(3) in degree 240. We can define a map from the generators of M2 above onto this generators which gives a group homomorphism into the Weyl group
+// One should save these files and use the file ReadSyl2 to read in the various groups to a MAGMA session
